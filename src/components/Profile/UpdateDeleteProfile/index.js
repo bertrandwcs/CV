@@ -113,7 +113,7 @@ const UpdateDeleteProfile = ({ item }) => {
         </div>
       )}
       {update && (
-        <div className="item-container-update">
+        <div >
           <Textfield
             defaultValue={item.name}
             onChange={(e) => setNameUpdate(e.target.value)}
