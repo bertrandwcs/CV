@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import MenuAppBar from './MenuAppBar/index';
-import BurgerMenu from './BurgerMenu/index';
+import Navbar from './Navbar/index';
 import CvPage from './CvPage/index';
 import "./main.css";
 
@@ -14,14 +14,14 @@ import ReadFormation from './ReadFormation/ReadFormation';
 import CreateProfile from './Profile/CreateProfile/CreateProfile'; */
 //
 import TemplatePage from './TemplatePage/index';
-import MyProfilePage from './MyProfilePage/index'
+import MyProfilePage from './Profile/MyProfilePage/index'
 import Footer from './Footer';
 
 const Main = () => {
     return (
 <main className="main-container">
     <MenuAppBar/>
-    <BurgerMenu/>
+    <Navbar/>
     <Switch>
         <Route exact path="/" component={CvPage} />
         <Route path="/template/" component={TemplatePage} />
