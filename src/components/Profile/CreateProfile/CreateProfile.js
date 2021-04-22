@@ -7,7 +7,6 @@ import { storage } from "../../../utils/firebaseConfig";
 import "./index.css";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
-
 const CreateProfile = () => {
   const [name, setName] = useState("");
   const [adress, setAdress] = useState("");
@@ -73,8 +72,8 @@ const CreateProfile = () => {
   return (
     <div classeName="create">
       <h4>Add your profile</h4>
-      <div className="form">
-        <div>
+      <div className="grid">
+        <div className="grid-container">
           <Textfield
             type="text"
             placeholder="name"
@@ -89,42 +88,42 @@ const CreateProfile = () => {
             onChange={(e) => setAdress(e.target.value)}
             required
           />
-        </div>
-        <div>
           <Textfield
-            type="text"
+            type="tel"
             placeholder="Mobile"
             value={mobile}
             onChange={(e) => setMobile(e.target.value)}
             required
           />
           <Textfield
+          type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-        </div>
-        <div className="container-upload">
           <Button variant="contained" color="primary" component="label">
-            <input type="file" onChange={handleChange} hidden />Add a picture</Button>
+            <input type="file" onChange={handleChange} hidden />
+            Add a picture
+          </Button>
           <Button onClick={handleUpload} variant="contained" color="primary">
             upload
           </Button>
-          <Textfield value={url} onChange={(e) => setUrl(e.target.value)} required />
+          <Textfield
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+          />
           <div>
-            {url && (
-              <img className="profile-img" src={url} alt="ProfilePicture" />
-            )}
-          </div>
-        </div>
-        <div className="container-progress">
+          {url && (
+            <img className="profile-img" src={url} alt="ProfilePicture" />
+          )}
           <LinearProgress
             variant="determinate"
             value={progress}
             max="100"
             color="secondary"
           />
+          </div>
         </div>
       </div>
       <Button onClick={createQuote} variant="contained" color="primary">
