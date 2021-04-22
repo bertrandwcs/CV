@@ -1,0 +1,11 @@
+.container {
+
+    justify-content: space-between;
+}
+.titre-navbar{
+    margin-left: 0px;
+}
+.container-global{
+    width: 100%;
+    justify-content: space-between;
+}

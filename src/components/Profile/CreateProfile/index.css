@@ -1,0 +1,20 @@
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.profile-img {
+    width: 100px;
+    border-radius: 100px;
+    margin-top: 20px;
+}
+.container-upload {
+    margin-top: 40px;
+
+}
+.container-progress{
+    width: 200px;
+    margin: auto;
+    margin-top: 30px;
+}

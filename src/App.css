@@ -1,38 +1,33 @@
-.App {
-  text-align: center;
+
+.login-page{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#3f51b5+49,7db9e8+100 */
+background: rgb(63,81,181); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(63,81,181,1) 49%, rgba(125,185,232,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(63,81,181,1) 49%,rgba(125,185,232,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(63,81,181,1) 49%,rgba(125,185,232,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f51b5', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
+
+    height: 100vh;
+    padding-top: 50px;
+    overflow-y: hidden;
+    margin-bottom: 0px;
+}
+.title {
+    color: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo-cv {
+    width: 130px;
+    background: white;
+    border-radius: 10px;
+    transform: rotate(5deg);
+    margin-top: 10px ;
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-page p{
+    color: white;
 }

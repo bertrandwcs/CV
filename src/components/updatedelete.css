@@ -1,0 +1,10 @@
+.li-list {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+.button-container {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    width: 20%;
+}
