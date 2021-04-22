@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import firebase from "../../utils/firebaseConfig";
-import { UidContext } from "../uidContext";
-import UpdateDeleteProfile from "../Profile/UpdateDeleteProfile/index";
-import CreateProfile from "../Profile/CreateProfile/CreateProfile";
+import firebase from "../../../utils/firebaseConfig";
+import { UidContext } from "../../uidContext";
+import UpdateDeleteProfile from "../UpdateDeleteProfile/index";
+import CreateProfile from "../CreateProfile/CreateProfile";
 
 const MyProfilePage = () => {
   const [profile, setProfile] = useState([]);

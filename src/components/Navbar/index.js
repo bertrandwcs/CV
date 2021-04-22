@@ -14,7 +14,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BurgerMenu() {
+export default function NavBar() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
