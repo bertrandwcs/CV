@@ -19,7 +19,7 @@ import Footer from './Footer';
 
 const Main = () => {
     return (
-<main >
+<main className="main-container">
     <MenuAppBar/>
     <BurgerMenu/>
     <Switch>

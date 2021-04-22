@@ -12,6 +12,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3f51b5', end
     padding-top: 50px;
     overflow-y: hidden;
     margin-bottom: 0px;
+    max-width:1280px;
 }
 .title {
     color: white;
