@@ -8,7 +8,6 @@ import './create.css';
 const Create = () => {
   const [company, setCompany] = useState('');
   const [text, setText] = useState('');
-  const [date, setDate] = useState('');
 
   const uid = useContext(UidContext)
 
@@ -18,13 +17,11 @@ const Create = () => {
       uid,
       company,
       text,
-      date,
     };
     quotesDB.push(quote);
 
     setCompany('');
     setText('');
-    setDate('');
   };
 
   return (
@@ -41,12 +38,6 @@ const Create = () => {
           placeholder="Tasks"
           value={text}
           onChange={(e) => setText(e.target.value)}
-        />
-        <Textfield
-          placeholder="Date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          type="date"
         />
         <Button onClick={createQuote} variant="contained" color="primary">Create</Button>
       </div>

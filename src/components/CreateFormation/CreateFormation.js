@@ -25,7 +25,7 @@ const CreateFormation = () => {
 
   return (
     <div classeName="create">
-      <h4>Add a formation</h4>
+      <h4>Add a training</h4>
       <div className="form">
         <Textfield
           type="text"
