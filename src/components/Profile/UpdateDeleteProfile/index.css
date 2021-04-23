@@ -22,11 +22,6 @@
     width:120px;
     object-fit: cover;
 }
-.img-portfolio {
-    border-radius: 10px;
-    width:auto;
-    object-fit: cover;
-}
 .name {
     font-size: 1rem;
     font-weight: bold;
