@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
-import firebase from "../utils/firebaseConfig";
-import { UidContext } from "./uidContext";
+import firebase from "../../../utils/firebaseConfig";
+import { UidContext } from "./../../uidContext";
 import Button from "@material-ui/core/Button";
 import "./updatedelete.css";
 import Accordion from "@material-ui/core/Accordion";
@@ -9,7 +9,7 @@ import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 
 
-const UpdateDelete = ({ item }) => {
+const UpdateDeleteExperience = ({ item }) => {
   const [update, setUpdate] = useState(false);
   const [companyUpdate, setCompanyUpdate] = useState(null);
   const [textUpdate, setTextUpdate] = useState(null);
@@ -100,4 +100,4 @@ const UpdateDelete = ({ item }) => {
   );
 };
 
-export default UpdateDelete;
+export default UpdateDeleteExperience;
