@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import firebase from "../../utils/firebaseConfig";
-import UpdateDelete from "../UpdateDelete";
-import UpdateDeleteFormation from "../UpdateDeleteFormation/UpdateDeletFormation";
-import CreateFormation from "../CreateFormation/CreateFormation";
+import UpdateDeleteExperience from "../Experience/UpdateDeleteExperience/UpdateDelete";
+import UpdateDeleteFormation from "../Formation/UpdateDeleteFormation";
+import CreateFormation from "../Formation/CreateFormation/index";
 import { UidContext } from "../uidContext";
 import "./index.css";
-import Create from "../Create";
+import CreateExperience from "../Experience/CreateExperience/Create";
 import UpdateDeleteProfile from "../Profile/UpdateDeleteProfile";
 
 const CvPage = () => {
@@ -72,7 +72,7 @@ const CvPage = () => {
             item.uid === uid ?
             <div>
             <h3 className="title-experience">Professional experiences</h3>
-            <UpdateDelete item={item} key={index} /> </div>: ""
+            <UpdateDeleteExperience item={item} key={index} /> </div>: ""
           )}
       </ul>
 
@@ -89,7 +89,7 @@ const CvPage = () => {
             )
           )}
       </ul>
-      <Create />
+      <CreateExperience />
       <CreateFormation />
     </div>
   );

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import firebase from "../../utils/firebaseConfig";
-import UpdateDelete from "../UpdateDelete";
-import UpdateDeleteFormation from "../UpdateDeleteFormation/UpdateDeletFormation";
+import UpdateDeleteExperience from "../Experience/UpdateDeleteExperience/UpdateDelete";
+import UpdateDeleteFormation from "../Formation/UpdateDeleteFormation";
 import "./index.css";
 import UpdateDeleteProfile from "../Profile/UpdateDeleteProfile/index";
 import gifFinteen from "../../Assets/finteenfinalversion.gif";
@@ -102,7 +102,7 @@ const CvPage = () => {
         {quoteList &&
           quoteList.map((item, index) =>
             item.uid === "cLEV0torEifx0FsJ9W7hJ8MRrsO2" ? (
-              <UpdateDelete item={item} key={index} />
+              <UpdateDeleteExperience item={item} key={index} />
             ) : (
               ""
             )
