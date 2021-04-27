@@ -111,7 +111,7 @@ const CvPage = () => {
             )
           )}
       </ul>
-      <ul className="container-ul">
+      <ul className="container-ul-skills">
         {!profile.skills && profile.map((item, index) =>
           item.uid === uid ? (
             <div>

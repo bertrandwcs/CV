@@ -3,6 +3,7 @@ import firebase from "../../../utils/firebaseConfig";
 import { UidContext } from "../../uidContext";
 import UpdateDeleteProfile from "../UpdateDeleteProfile/index";
 import CreateProfile from "../CreateProfile/CreateProfile";
+import './index.css'
 
 const MyProfilePage = () => {
   const [profile, setProfile] = useState([]);
@@ -23,9 +24,9 @@ const MyProfilePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="container-myprofile">
       <h1>Profile</h1>
-      <ul className="container-ul">
+      <ul className="container-ul-profile">
         {profile &&
           profile.map((item, index) =>
             item.uid === uid ? (
