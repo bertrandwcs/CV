@@ -85,11 +85,11 @@ const CvPage = () => {
       </div>
 
       <ul className="container-ul">
+      {quoteList && (<h3 className="title-experience">Professional experiences</h3>)}
         {quoteList &&
           quoteList.map((item, index) =>
             item.uid === uid ? (
               <div>
-                <h3 className="title-experience">Professional experiences</h3>
                 <UpdateDeleteExperience item={item} key={index} />{" "}
               </div>
             ) : (
@@ -99,11 +99,11 @@ const CvPage = () => {
       </ul>
 
       <ul className="container-ul">
+        <h3>Training</h3>
         {formation &&
           formation.map((item, index) =>
             item.uid === uid ? (
-              <div>
-                <h3>Training</h3>
+              <div>        
                 <UpdateDeleteFormation item={item} key={index} />
               </div>
             ) : (
@@ -112,7 +112,7 @@ const CvPage = () => {
           )}
       </ul>
       <ul className="container-ul">
-        {profile.map((item, index) =>
+        {!profile.skills && profile.map((item, index) =>
           item.uid === uid ? (
             <div>
               <h3>skills</h3>
