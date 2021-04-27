@@ -64,22 +64,24 @@ const UpdateDeleteProfile = ({ item }) => {
             <li>{item.mobile}</li>
             <li>{item.email}</li>
           </ul>
-          {authorCheck() && (
-            <div className="button-container">
-              <Button
-                onClick={() => setUpdate(!update)}
-                variant="contained"
-                color="primary"
-              >
-                Update
-              </Button>
-              <Button onClick={deleteItem} variant="contained" color="primary">
-                Delete
-              </Button>
-            </div>
-          )}
         </div>
-      )}
+      )}{" "}
+      <div>
+        {authorCheck() && (
+          <div className="button-container">
+            <Button
+              onClick={() => setUpdate(!update)}
+              variant="contained"
+              color="primary"
+            >
+              Update
+            </Button>
+            <Button onClick={deleteItem} variant="contained" color="primary">
+              Delete
+            </Button>
+          </div>
+        )}
+      </div>
       <li className="li-list">
         {update && (
           <div>

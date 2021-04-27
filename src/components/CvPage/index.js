@@ -67,20 +67,19 @@ const CvPage = () => {
         </div>
         <div className="profile-container-skills">
           <ul>
-            <h3>Hard skills</h3>
-            <li>
-              Front-end : React / Hooks / Redux / Javascript / Html / Css /
-              Bootstrap
-            </li>
-            <li>Back-end : Nodejs / Express / Postman</li>
-            <li>Database : SQL / Mysql / Sequelize</li>
-            <li>Developer :Github, GitLab / Visualstudio / Linux </li>
-          </ul>
-          <ul>
-            <h3>soft skills</h3>
-            <li>Organization and project management (Scrum method)</li>
-            <li>Coaching/trainer</li>
-            <li>Commercial negotiation</li>
+            {profile &&
+              profile.map((item) =>
+                item.uid === "cLEV0torEifx0FsJ9W7hJ8MRrsO2" ? (
+                  <ul>
+                    <h3>Hard Skills</h3>
+                    <li>{item.skills.hardSkill}</li>
+                    <h3>Soft Skills</h3>
+                    <li>{item.skills.softSkill}</li>
+                  </ul>
+                ) : (
+                  ""
+                )
+              )}
           </ul>
         </div>
         <a

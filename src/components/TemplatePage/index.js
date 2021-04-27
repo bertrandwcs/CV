@@ -7,6 +7,8 @@ import { UidContext } from "../uidContext";
 import "./index.css";
 import CreateExperience from "../Experience/CreateExperience/Create";
 import UpdateDeleteProfile from "../Profile/UpdateDeleteProfile";
+import UpdateDeleteSkills from "../Skills/UpdateDeleteSkills.js";
+import CreateSkills from "../Skills/CreateSkills.js";
 
 const CvPage = () => {
   const [quoteList, setQuoteList] = useState([]);
@@ -56,23 +58,43 @@ const CvPage = () => {
 
   return (
     <div className="container-read">
-      <ul className="container-ul">
-        {profile &&
-          profile.map((item, index) =>
-            item.uid === uid ? (
-              <UpdateDeleteProfile item={item} key={index} />
+      <div className="grid-profile">
+        <div className="container-user">
+          <ul className="container-ul">
+            {profile &&
+              profile.map((item, index) =>
+                item.uid === uid ? (
+                  <UpdateDeleteProfile item={item} key={index} />
+                ) : (
+                  ""
+                )
+              )}
+          </ul>
+        </div>
+        <ul className="container-ul">
+          {profile.map((item, index) =>
+            item.uid === uid && item.skills? (
+              <div className="profile-container-skills">
+                <UpdateDeleteSkills item={item} key={index} />
+              </div>
             ) : (
               ""
             )
           )}
-      </ul>
+        </ul>
+      </div>
+
       <ul className="container-ul">
         {quoteList &&
           quoteList.map((item, index) =>
-            item.uid === uid ?
-            <div>
-            <h3 className="title-experience">Professional experiences</h3>
-            <UpdateDeleteExperience item={item} key={index} /> </div>: ""
+            item.uid === uid ? (
+              <div>
+                <h3 className="title-experience">Professional experiences</h3>
+                <UpdateDeleteExperience item={item} key={index} />{" "}
+              </div>
+            ) : (
+              ""
+            )
           )}
       </ul>
 
@@ -89,6 +111,19 @@ const CvPage = () => {
             )
           )}
       </ul>
+      <ul className="container-ul">
+        {profile.map((item, index) =>
+          item.uid === uid ? (
+            <div>
+              <h3>skills</h3>
+              <CreateSkills item={item} key={index} />
+            </div>
+          ) : (
+            ""
+          )
+        )}
+      </ul>
+
       <CreateExperience />
       <CreateFormation />
     </div>
