@@ -16,6 +16,7 @@ const CreateProfile = () => {
   const [url, setUrl] = useState("");
   const [progress, setProgress] = useState(0);
 
+
   const uid = useContext(UidContext);
 
   const handleChange = (e) => {
