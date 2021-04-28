@@ -1,6 +1,6 @@
 import React from "react";
 import './index.css';
-import { makeStyles } from "@material-ui/core/styles";
+// import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import { NavLink } from "react-router-dom";
@@ -8,14 +8,14 @@ import AccountCircleSharpIcon from '@material-ui/icons/AccountCircleSharp';
 import AddToPhotosSharpIcon from '@material-ui/icons/AddToPhotosSharp';
 import ArtTrackSharpIcon from '@material-ui/icons/ArtTrackSharp';
 
-const useStyles = makeStyles({
-  root: {
-    width: 500
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     width: 500
+//   },
+// });
 
 export default function NavBar() {
-  const classes = useStyles();
+  // const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   return (
